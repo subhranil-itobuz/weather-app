@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3937fa;
+}
+
+.body-container {
+  max-width: 768px;
+
+  .header {
+    &-icon {
+      @media (min-width: 768px) {
+        width: 90px;
+      }
+    }
+
+    &-input {
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.393);
+      }
+
+      &:focus {
+        background-color: #3937fa;
+        outline: none;
+      }
+    }
+  }
+
+  .country {
+    visibility: hidden;
+  }
+
+  .result {
+    height: 62vh;
+
+    &-image {
+      width: 220px;
+      aspect-ratio: 1/1;
+      filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
+
+      @media (min-width: 768px) {
+        width: 350px;
+      }
+
+      @media (min-width: 1440px) {
+        width: 380px;
+      }
+    }
+
+    &-card {
+      &-temp {
+        font-size: 80px;
+        line-height: 80px;
+
+        @media (min-width: 768px) {
+          line-height: 150px;
+          font-size: 150px;
+        }
+
+        @media (min-width: 1440px) {
+          font-size: 190px;
+        }
+      }
+
+      &-feels {
+        font-size: 30px;
+        color: #50bcff;
+
+        @media (min-width: 1440px) {
+          font-size: 45px;
+        }
+      }
+    }
+  }
+}
